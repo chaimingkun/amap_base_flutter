@@ -200,6 +200,10 @@ static NSString *success = @"调用成功";
         annotation.markerOptions = markerOptions;
 
         [_mapView addAnnotation:annotation];
+        if (markerOptions.position != nil) {
+            CLLocationCoordinate2D center = CLLocationCoordinate2DMake(markerOptions.position.latitude, markerOptions.position.longitude);
+            [_mapView setCenterCoordinate:center animated:YES];
+        }
 
         result(success);
     } else if ([@"marker#addMarkers" isEqualToString:call.method]) {
