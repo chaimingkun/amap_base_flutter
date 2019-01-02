@@ -545,7 +545,7 @@ static NSString *success = @"调用成功";
 
         if (annotationView.image != nil) {
             CGSize size = annotationView.imageView.frame.size;
-            annotationView.frame = CGRectMake(annotationView.center.x + size.width / 2, annotationView.center.y, 24, 24);
+            annotationView.frame = CGRectMake(annotationView.center.x + size.width / 2, annotationView.center.y, 36, 36);
             annotationView.centerOffset = CGPointMake(0, -12);
         }
 
